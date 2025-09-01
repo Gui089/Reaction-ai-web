@@ -1,42 +1,13 @@
 "use client";
+import { LoginForm } from "@/components/login-form";
 
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import { useMutation } from "@tanstack/react-query";
-import { createRedactionUseCase } from "@/domain/redaction/correction-redaction";
-
-export default function Home() {
-  const [redaction, setRedaction] = useState("");
-  
-  const createRedaction = useMutation({
-    mutationFn: createRedactionUseCase,
-    onSuccess: () => {
-      setRedaction("");
-    },
-  });
-
-  const handleClick = () => {
-    if (!redaction) return; 
-    createRedaction.mutate(redaction);
-  };
+export default function Login() {
 
   return (
-    <div className="flex flex-col items-center p-8 gap-4 h-full">
-      <Textarea
-        placeholder="Escreva sua redação aqui"
-        className="flex-1 w-full text-white"
-        value={redaction}
-        onChange={(e) => setRedaction(e.target.value)}
-      />
-      <Button
-        variant="outline"
-        className="w-full mb-1"
-        onClick={handleClick}
-        disabled={createRedaction.isPending}
-      >
-        {createRedaction.isPending ? "Enviando..." : "Enviar"}
-      </Button>
+    <div className="flex min-h-svh w-full items-center justify-center p-6 md:p-1 ">
+      <div className="w-full max-w-sm">
+        <LoginForm />
+      </div>
     </div>
   );
 }

@@ -124,3 +124,29 @@
 html, body {
   height: '100%';
 }
+
+:root {
+  --sidebar: 0 0% 0%; /* preto */
+  --sidebar-foreground: 0 0% 100%; /* branco */
+  --sidebar-accent: 240 3.7% 15.9%; /* um cinza escuro pra hover */
+  --sidebar-accent-foreground: 0 0% 100%; /* branco */
+}
+
+:root {
+  --background: 0 0% 0%;          /* preto */
+  --foreground: 0 0% 100%;        /* branco */
+
+  --card: 0 0% 0%;
+  --card-foreground: 0 0% 100%;
+
+  --popover: 0 0% 0%;
+  --popover-foreground: 0 0% 100%;
+
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+
+  --sidebar: 0 0% 0%;             /* preto */
+  --sidebar-foreground: 0 0% 100%;/* branco */
+  --sidebar-accent: 240 3.7% 15.9%;
+  --sidebar-accent-foreground: 0 0% 100%;
+}

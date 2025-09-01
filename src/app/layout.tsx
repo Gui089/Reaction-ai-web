@@ -24,7 +24,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const queryClient = new QueryClient();
   return (
     <html lang="en" className="h-full">
       <body
