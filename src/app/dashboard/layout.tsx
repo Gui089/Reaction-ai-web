@@ -21,7 +21,7 @@ interface LayoutProps {
   breadcrumb?: string
 }
 
-export default function Layout({ children, breadcrumb }: LayoutProps) {
+export default function Layout({ children }: LayoutProps) {
 
   const pathName = useSelectedLayoutSegment();
 
@@ -39,7 +39,7 @@ export default function Layout({ children, breadcrumb }: LayoutProps) {
             <BreadcrumbList>
               <BreadcrumbSeparator className="hidden md:block" />
               <BreadcrumbItem>
-                <BreadcrumbPage>{pathName}</BreadcrumbPage>
+                <BreadcrumbPage>{pathName == "redacoes" ? "Redações" : ""}</BreadcrumbPage>
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
